@@ -1,6 +1,6 @@
 {
   "name": "static-build-with-pip",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Static builder for now.sh with pip dependencies",
   "main": "index.js",
   "repository": "https://github.com/n6g7/static-build-with-pip",
@@ -8,5 +8,8 @@
   "license": "MIT",
   "dependencies": {
     "@now/static-build": "^0.5.7"
+  },
+  "peerDependencies": {
+    "@now/build-utils": "^0.5.7"
   }
 }

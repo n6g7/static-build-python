@@ -1,16 +1,13 @@
 const util = require("util");
 const exec = util.promisify(require("child_process").exec);
+const { download } = require("@now/build-utils");
 const static = require("@now/static-build");
 
-const installPipPackage = package => exec(`pip3 install ${package}`);
-
 const build = async arg => {
-  if (arg.config && arg.config.packages) {
-    for (let package of arg.config.packages) {
-      console.log("installing", package);
-      await installPipPackage(package);
-    }
-  }
+  await download(arg.files, arg.workPath, arg.meta);
+  await exec("pip3 install pipenv");
+  await exec("pipenv install", { cwd: arg.workPath });
+
   return await static.build(arg);
 };
 
