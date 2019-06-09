@@ -1,4 +1,4 @@
-# static-build-with-pip
+# static-build-python
 
 now.sh builder that supports pip dependencies
 
@@ -9,10 +9,7 @@ Example `now.json`:
   "builds": [
     {
       "src": "package.json",
-      "use": "static-build-with-pip",
-      "config": {
-        "packages": ["jupyter"]
-      }
+      "use": "static-build-python"
     }
   ]
 }

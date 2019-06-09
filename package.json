@@ -1,9 +1,9 @@
 {
-  "name": "static-build-with-pip",
-  "version": "0.2.0",
-  "description": "Static builder for now.sh with pip dependencies",
+  "name": "static-build-python",
+  "version": "0.1.0",
+  "description": "Static builder for now.sh with python dependencies",
   "main": "index.js",
-  "repository": "https://github.com/n6g7/static-build-with-pip",
+  "repository": "https://github.com/n6g7/static-build-python",
   "author": "Nathan Gaberel <nathan@gnab.fr>",
   "license": "MIT",
   "dependencies": {
